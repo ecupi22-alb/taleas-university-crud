@@ -6,7 +6,9 @@ A simple University Student Management app. You can manage students, courses, an
 
 taleas-university/
 │
+
 ├── config/
+
 │   └── db.js
 │
 ├── controllers/
@@ -146,4 +148,5 @@ frontend/    → Vite React app, pages (Students, Courses, Enrollments), compone
 ## Author
 
 Emiliano Çupi
+
 
