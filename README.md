@@ -16,7 +16,7 @@ A simple University Student Management app. You can manage students, courses, an
    `cd backend` → `npm install` → copy `.env.example` to `.env` if needed → `npm start`.  
    You should see "Server running on port 5000" and "MongoDB connected".
 4. **Frontend:** open a **new** terminal, `cd frontend` → `npm install` → `npm run dev`.  
-   Open http://localhost:3000 in the browser.
+   Open <http://localhost:3000> in the browser.
 5. Use **Students** to add students, **Courses** to add courses, **Enrollments** to enroll a student in a course.
 
 ### 1. MongoDB (details)
@@ -45,7 +45,7 @@ Then:
 npm start
 ```
 
-Server runs on http://localhost:5000.
+Server runs on <http://localhost:5000>.
 
 ### 3. Frontend
 
@@ -57,7 +57,7 @@ npm install
 npm run dev
 ```
 
-App runs on http://localhost:3000. Vite proxies `/api` to the backend so you don’t need to change URLs.
+App runs on <http://localhost:3000>. Vite proxies `/api` to the backend so you don’t need to change URLs.
 
 ## Features
 
@@ -77,10 +77,8 @@ App runs on http://localhost:3000. Vite proxies `/api` to the backend so you don
 
 ## Project structure
 
-```
 backend/     → server, routes, controllers, models, middleware (translate), config (db)
 frontend/    → Vite React app, pages (Students, Courses, Enrollments), components, services/api
-```
 
 ## Common errors and fixes
 
