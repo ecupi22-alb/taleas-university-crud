@@ -2,6 +2,61 @@
 
 A simple University Student Management app. You can manage students, courses, and enroll students in courses. Built with React (Vite) and Node/Express/MongoDB.
 
+## Project Structure
+
+taleas-university/
+│
+├── config/
+│   └── db.js
+│
+├── controllers/
+│   ├── courseController.js
+│   ├── enrollmentController.js
+│   └── studentController.js
+│
+├── middleware/
+│   └── translate.js
+│
+├── models/
+│   ├── Course.js
+│   ├── Enrollment.js
+│   └── Student.js
+│
+├── routes/
+│   ├── courses.js
+│   ├── enrollments.js
+│   └── students.js
+│
+├── src/
+│   ├── components/
+│   │   ├── Modal.jsx
+│   │   ├── Spinner.jsx
+│   │   └── Toast.jsx
+│   │
+│   ├── pages/
+│   │   ├── Courses.jsx
+│   │   ├── Enrollments.jsx
+│   │   └── Students.jsx
+│   │
+│   ├── services/
+│   │   └── api.js
+│   │
+│   ├── styles/
+│   │   └── App.css
+│   │
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── .env
+├── .env.example
+├── .gitignore
+├── README.md
+├── index.html
+├── package.json
+├── package-lock.json
+├── server.js
+└── vite.config.js
+
 ## Tech used
 
 - **Frontend:** React 18, Vite, React Router, plain CSS (Flexbox), JavaScript (ES6)
@@ -91,3 +146,4 @@ frontend/    → Vite React app, pages (Students, Courses, Enrollments), compone
 ## Author
 
 Emiliano Çupi
+
