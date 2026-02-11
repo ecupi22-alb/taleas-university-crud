@@ -88,6 +88,10 @@ frontend/    → Vite React app, pages (Students, Courses, Enrollments), compone
 - **"Email already exists" / "Course code already exists"** — Use a different email or course code; these fields are unique.
 - **"Student is already enrolled"** — That student is already in that course; check the Enrollments page before enrolling again.
 
+## Run both environments
+
+.\start-dev.bat
+
 ## Author
 
 Emiliano Çupi
