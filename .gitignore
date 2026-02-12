@@ -1,0 +1,33 @@
+### Node
+node_modules/
+**/node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+
+# Env files
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Lockfiles at repo root (keep per-package lockfiles)
+/package-lock.json
+
+# Misc
+.cache/
+coverage/
+logs/
+*.log
