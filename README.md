@@ -111,17 +111,80 @@ frontend/    → Vite React app, pages (Students, Courses, Enrollments), compone
 - **"Student is already enrolled"** — That student is already in that course; check the Enrollments page before enrolling again.
 
 ## Run both environments
+# Taleas_Task2_Emiliano
 
-From Windows Explorer double-click `start-dev.bat`, or run from PowerShell/CMD:
+A simple University Student Management app. You can manage students, courses, and enroll students in courses. Built with React (Vite) and Node/Express/MongoDB.
+
+## Tech used
+
+- **Frontend:** React 18, Vite, React Router, plain CSS (Flexbox), JavaScript (ES6)
+- **Backend:** Node.js, Express, MongoDB (Mongoose)
+- **Features:** CRUD for students and courses, enroll/unenroll, modals and toasts (no alert/confirm), responsive layout
+
+## How to run (recommended)
+
+1. Ensure MongoDB is running locally (or use MongoDB Atlas and set `MONGODB_URI` in `backend/.env`).
+2. From the project root (recommended):
+
+```powershell
+# Install dependencies (run once)
+npm install
+
+# Start both dev servers (root script uses concurrently)
+npm run dev
+```
+
+This runs the backend (`nodemon server.js`) on port `5000` and the frontend (Vite) on port `3000` (or the next free port).
+
+## Manual per-service run
+
+```powershell
+cd backend
+npm install
+copy .env.example .env   # Windows (or use 'cp' on macOS/Linux)
+npm run dev
+
+# in a new terminal
+cd frontend
+npm install
+npm run dev
+```
+
+Open the frontend URL shown by Vite (e.g. http://localhost:3000 or http://localhost:3001).
+
+## MongoDB
+
+- Default local URI: `mongodb://localhost:27017/taleas_university`
+- Do NOT commit `.env`; a `.env.example` file is provided. The repo's `.gitignore` excludes `.env`.
+
+## API (REST)
+
+- `GET/POST /api/students` — list, create
+- `GET/PUT/DELETE /api/students/:id` — get one, update, delete
+- `GET/POST /api/courses` — list, create
+- `PUT/DELETE /api/courses/:id` — update, delete
+- `GET/POST/DELETE /api/enroll` — list enrollments, enroll (body: studentId, courseId), remove (body: studentId, courseId)
+
+## Project structure
+
+```
+backend/     → server, routes, controllers, models, middleware (translate), config (db)
+frontend/    → Vite React app, pages (Students, Courses, Enrollments), components, services/api
+```
+
+## Common errors and fixes
+
+- **Backend: "MongoDB connection error"** — MongoDB is not running or the URI is wrong. Start MongoDB or fix `MONGODB_URI` in `.env`.
+- **Frontend: "Failed to load" / network errors** — Backend must be running on port 5000. Start it with `npm run dev` in the `backend` folder.
+- **CORS errors** — Backend uses `cors()` for all origins. If you still see CORS issues, make sure you use the Vite dev server so the proxy is used; avoid opening the frontend by file://.
+
+## Run both environments
+
+- Double-click `start-dev.bat` (Windows) or run from project root:
 
 ```powershell
 .\start-dev.bat
-```
-
-Alternatively use the root npm script:
-
-```powershell
-npm install
+# or
 npm run dev
 ```
 
