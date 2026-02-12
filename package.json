@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "taleas-task2",
   "private": true,
@@ -11,3 +12,4 @@
     "concurrently": "^8.2.0"
   }
 }
+

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Node
 node_modules/
 **/node_modules/
@@ -26,6 +27,7 @@ Thumbs.db
 # Lockfiles at repo root (keep per-package lockfiles)
 /package-lock.json
 
+>>>>>>> ed7b4f42deb4e64713b96ab56403b45e678f9323
 # Misc
 .cache/
 coverage/
