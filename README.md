@@ -3,36 +3,6 @@
 
 A simple University Student Management app. You can manage students, courses, and enroll students in courses. Built with React (Vite) and Node/Express/MongoDB.
 
-## Tech used
-
-- **Frontend:** React 18, Vite, React Router, plain CSS (Flexbox), JavaScript (ES6)
-- **Backend:** Node.js, Express, MongoDB (Mongoose)
-- **Features:** CRUD for students and courses, enroll/unenroll, modals and toasts (no alert/confirm), responsive layout
-
-## How to run (step-by-step)
-
-<<<<<<< HEAD
-# Taleas_Task2_Emiliano
-=======
-1. **Open a terminal** in the project folder `Taleas_Task2_Emiliano`.
-2. **Start MongoDB** (if local): make sure the MongoDB service is running, or run `mongod`.
-3. **Quick (recommended)** — run both dev servers from the repo root:
-
-```powershell
-# from project root
-npm install            # installs root devDeps (concurrently)
-npm run dev            # runs backend and frontend concurrently
-```
-
-This starts the backend on port `5000` and the frontend dev server (Vite) on `3000` (or the next available port).
-
-4. **Manual (per-service)** — if you prefer separate terminals:
-
-```powershell
-cd backend
-npm install
-copy .env.example .env   # Windows (or use 'cp' on macOS/Linux)
-npm run dev              # uses nodemon for dev
 # Taleas_Task2_Emiliano
 
 A simple University Student Management app. You can manage students, courses, and enroll students in courses. Built with React (Vite) and Node/Express/MongoDB.
@@ -124,6 +94,26 @@ frontend/    → Vite React app, pages (Students, Courses, Enrollments), compone
 ## Author
 
 Emiliano Çupi
+- `GET/POST /api/students` — list, create  
+- `GET/PUT/DELETE /api/students/:id` — get one, update, delete  
+- `GET/POST /api/courses` — list, create  
+- `PUT/DELETE /api/courses/:id` — update, delete  
+- `GET/POST/DELETE /api/enroll` — list enrollments, enroll (body: studentId, courseId), remove (body: studentId, courseId)
+
+## Project structure
+
+backend/     → server, routes, controllers, models, middleware (translate), config (db)
+frontend/    → Vite React app, pages (Students, Courses, Enrollments), components, services/api
+
+## Common errors and fixes
+
+- **Backend: "MongoDB connection error"** — MongoDB is not running or the URI is wrong. Start MongoDB or fix `MONGODB_URI` in `.env`.
+- **Frontend: "Failed to load" / network errors** — Backend must be running on port 5000. Start it with `npm start` in the `backend` folder.
+- **CORS errors** — Backend uses `cors()` for all origins. If you still see CORS issues, make sure you use the Vite dev server (port 3000) so the proxy is used; avoid opening the frontend by file://.
+
+## Author
+
+Emiliano Çupi
 │
 ├── src/
 │   ├── components/
@@ -166,6 +156,8 @@ Emiliano Çupi
 
 1. **Open a terminal** in the project folder `Taleas_Task2_Emiliano`.
 2. **Start MongoDB** (if local): make sure the MongoDB service is running, or run `mongod`.
+=======
+>>>>>>> parent of f264c9b (docs: update README with root dev instructions and .env guidance)
 3. **Backend:**  
    `cd backend` → `npm install` → copy `.env.example` to `.env` if needed → `npm start`.  
    You should see "Server running on port 5000" and "MongoDB connected".
@@ -242,6 +234,13 @@ frontend/    → Vite React app, pages (Students, Courses, Enrollments), compone
 - **"Email already exists" / "Course code already exists"** — Use a different email or course code; these fields are unique.
 - **"Student is already enrolled"** — That student is already in that course; check the Enrollments page before enrolling again.
 
+<<<<<<< HEAD
+=======
+## Run both environments
+
+.\start-dev.bat
+
+>>>>>>> parent of f264c9b (docs: update README with root dev instructions and .env guidance)
 ## Author
 
 Emiliano Çupi
