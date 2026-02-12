@@ -12,11 +12,31 @@ A simple University Student Management app. You can manage students, courses, an
 
 1. **Open a terminal** in the project folder `Taleas_Task2_Emiliano`.
 2. **Start MongoDB** (if local): make sure the MongoDB service is running, or run `mongod`.
-3. **Backend:**  
-   `cd backend` → `npm install` → copy `.env.example` to `.env` if needed → `npm start`.  
-   You should see "Server running on port 5000" and "MongoDB connected".
-4. **Frontend:** open a **new** terminal, `cd frontend` → `npm install` → `npm run dev`.  
-   Open <http://localhost:3000> in the browser.
+3. **Quick (recommended)** — run both dev servers from the repo root:
+
+```powershell
+# from project root
+npm install            # installs root devDeps (concurrently)
+npm run dev            # runs backend and frontend concurrently
+```
+
+This starts the backend on port `5000` and the frontend dev server (Vite) on `3000` (or the next available port).
+
+4. **Manual (per-service)** — if you prefer separate terminals:
+
+```powershell
+cd backend
+npm install
+copy .env.example .env   # Windows (or use 'cp' on macOS/Linux)
+npm run dev              # uses nodemon for dev
+
+# in a new terminal
+cd frontend
+npm install
+npm run dev
+```
+
+Open the frontend URL shown by Vite (e.g. http://localhost:3000 or http://localhost:3001).
 5. Use **Students** to add students, **Courses** to add courses, **Enrollments** to enroll a student in a course.
 
 ### 1. MongoDB (details)
@@ -46,6 +66,8 @@ npm start
 ```
 
 Server runs on <http://localhost:5000>.
+
+Important: do NOT commit your `.env` file. A `.env.example` is provided as a template. The repo's `.gitignore` excludes `.env`.
 
 ### 3. Frontend
 
@@ -90,7 +112,18 @@ frontend/    → Vite React app, pages (Students, Courses, Enrollments), compone
 
 ## Run both environments
 
+From Windows Explorer double-click `start-dev.bat`, or run from PowerShell/CMD:
+
+```powershell
 .\start-dev.bat
+```
+
+Alternatively use the root npm script:
+
+```powershell
+npm install
+npm run dev
+```
 
 ## Author
 
